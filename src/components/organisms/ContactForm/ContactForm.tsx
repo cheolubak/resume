@@ -32,11 +32,11 @@ export default function ContactForm() {
       prev[name] = value;
 
       setValid(
-        !!prev.name &&
-          !!prev.email &&
-          emailRegex.test(prev.email) &&
-          !!prev.content &&
-          !!prev.subject
+        !!info.name &&
+          !!info.email &&
+          emailRegex.test(info.email) &&
+          !!info.content &&
+          !!info.subject
       );
 
       return prev;
