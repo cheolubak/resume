@@ -8,6 +8,7 @@ function AboutPage() {
   useEffect(() => {
     pageView({ screenClass: "AboutPage", screenName: "About" });
   }, []);
+  
   return <AboutTemplate />;
 }
 
