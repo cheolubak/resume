@@ -42,6 +42,7 @@ export default function WorkList() {
             'Typescript',
             'Emotion',
             'Stroybook',
+            'Recoil',
           ],
         },
         {
