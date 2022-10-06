@@ -7,7 +7,6 @@ const AboutPage = React.lazy(() =>
     import('./components/pages/About'),
     new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(([moduleExports]) => {
-    console.log(moduleExports);
     return moduleExports;
   })
 );
@@ -16,7 +15,6 @@ const SkillsPage = React.lazy(() =>
     import('./components/pages/Skills'),
     new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(([moduleExports]) => {
-    console.log(moduleExports);
     return moduleExports;
   })
 );
@@ -25,7 +23,6 @@ const WorksPage = React.lazy(() =>
     import('./components/pages/Works'),
     new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(([moduleExports]) => {
-    console.log(moduleExports);
     return moduleExports;
   })
 );
@@ -34,7 +31,6 @@ const ContactPage = React.lazy(() =>
     import('./components/pages/Contact'),
     new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(([moduleExports]) => {
-    console.log(moduleExports);
     return moduleExports;
   })
 );
