@@ -1,5 +1,6 @@
-import React, { memo } from "react";
-import { WorkCardProps } from "./WorkCardProps";
+import React, { memo } from 'react';
+import { css } from '@emotion/css';
+import { WorkCardProps } from './WorkCardProps';
 import {
   WorCardTitleStyled,
   WorkCardDateStyled,
@@ -10,7 +11,7 @@ import {
   WorkCardSkillTitleStyled,
   WorkCardStyled,
   WorkCardSubTitleStyled,
-} from "./WorkCardStyled";
+} from './WorkCardStyled';
 
 function WorkCard({
   started,
@@ -24,7 +25,7 @@ function WorkCard({
   return (
     <WorkCardStyled>
       <WorkCardDateStyled>
-        {started} ~ {!!ended ? ended : "현재"}
+        {started} ~ {!!ended ? ended : '현재'}
       </WorkCardDateStyled>
       <WorCardTitleStyled>{corpName}</WorCardTitleStyled>
       <WorkCardDescriptionStyled
@@ -38,14 +39,22 @@ function WorkCard({
             {skill.sub.length > 0 && (
               <WorkCardSkillStyled>-</WorkCardSkillStyled>
             )}
-            <WorkCardSkillStyled>{skill.sub.join(", ")}</WorkCardSkillStyled>
+            <WorkCardSkillStyled>{skill.sub.join(' | ')}</WorkCardSkillStyled>
           </WorkCardItemStyled>
         ))}
       </WorkCardItemsStyled>
       <WorkCardSubTitleStyled>진행한 프로젝트</WorkCardSubTitleStyled>
       <WorkCardItemsStyled>
         {projects.map((project) => (
-          <WorkCardItemStyled>{project}</WorkCardItemStyled>
+          <WorkCardItemStyled
+            className={css`
+              &:before {
+                content: '•';
+              }
+            `}
+          >
+            {project}
+          </WorkCardItemStyled>
         ))}
       </WorkCardItemsStyled>
     </WorkCardStyled>

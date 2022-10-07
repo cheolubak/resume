@@ -5,6 +5,6 @@ export const WorkListStyled = styled.section`
   margin: 0 -24px;
 
   & .swiper {
-    padding: 0 16px;
+    padding: 0 16px 40px;
   }
 `;

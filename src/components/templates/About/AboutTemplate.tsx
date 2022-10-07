@@ -13,7 +13,7 @@ function AboutTemplate() {
       <Background />
       <SideNav />
       <Container>
-        <Title>저는 이런 사람입니다!</Title>
+        <Title>저는 이런 개발자입니다!</Title>
         <Description>
           안녕하세요.
           <br />
