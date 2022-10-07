@@ -44,7 +44,10 @@ function SkillHoriList() {
       title: 'CI/CD',
       list: ['GitHub Action', 'Bitbucket Pipeline', 'Jenkins'],
     },
-    { title: 'TOOLS', list: ['VS Code', 'Webstorm', 'IntelliJ', 'Figma'] },
+    {
+      title: 'TOOLS',
+      list: ['VS Code', 'Webstorm', 'IntelliJ', 'Datagrip', 'Figma', 'Postman'],
+    },
   ];
   return (
     <SkillHoriListStyled>
