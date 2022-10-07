@@ -1,11 +1,11 @@
-import React from "react";
-import Background from "../../atom/Background";
-import Container from "../../atom/Container/Container";
-import Description from "../../atom/Description";
-import Title from "../../atom/Title";
-import SideNav from "../../organisms/SideNav";
-import SkillList from "../../organisms/SkillList";
-import { AboutTemplateStyled } from "./AboutTemplateStyled";
+import React from 'react';
+import Background from '../../atom/Background';
+import Container from '../../atom/Container/Container';
+import Description from '../../atom/Description';
+import Title from '../../atom/Title';
+import SideNav from '../../organisms/SideNav';
+import SkillList from '../../organisms/SkillList';
+import { AboutTemplateStyled } from './AboutTemplateStyled';
 
 function AboutTemplate() {
   return (
@@ -17,8 +17,8 @@ function AboutTemplate() {
         <Description>
           안녕하세요.
           <br />
-          2012년 11월 부터 개발자로 시작해서 현재까지도 재미와 보람을 느끼며
-          개발을 하고 있는 개발자입니다.
+          2012년 11월 부터 시작해서 현재까지도 재미와 보람을 느끼며 개발을 하고
+          있는 개발자입니다.
           <br />
           지금까지 프론트앤드, 백앤드 개발 모두 해보았고, 계속해서 하고 있으며,
           배움에는 끝이 없다고 생각해서 계속해서 배워나가고 있습니다.
