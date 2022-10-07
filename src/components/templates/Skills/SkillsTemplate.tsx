@@ -1,12 +1,12 @@
-import React from "react";
-import Background from "../../atom/Background";
-import Container from "../../atom/Container";
-import Description from "../../atom/Description";
-import Title from "../../atom/Title";
-import SideNav from "../../organisms/SideNav";
-import SkillLevelList from "../../organisms/SkillLevelList";
-import SkillList from "../../organisms/SkillList";
-import { SkillsTemplateStyled } from "./SkillsTemplateStyled";
+import React from 'react';
+import Background from '../../atom/Background';
+import Container from '../../atom/Container';
+import Description from '../../atom/Description';
+import Title from '../../atom/Title';
+import SideNav from '../../organisms/SideNav';
+import SkillHoriList from '../../organisms/SkillHoriList';
+import SkillLevelList from '../../organisms/SkillLevelList';
+import { SkillsTemplateStyled } from './SkillsTemplateStyled';
 
 export default function SkillsTemplate() {
   return (
@@ -33,7 +33,7 @@ export default function SkillsTemplate() {
           <br />
         </Description>
         <SkillLevelList />
-        <SkillList />
+        <SkillHoriList />
       </Container>
     </SkillsTemplateStyled>
   );
