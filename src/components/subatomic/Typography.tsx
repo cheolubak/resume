@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 export const TITLE = css`
   font-size: 48px;
@@ -13,9 +13,9 @@ export const SUB_TITLE = css`
 `;
 
 export const BODY = css`
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
   letter-spacing: 0.02em;
 `;
 

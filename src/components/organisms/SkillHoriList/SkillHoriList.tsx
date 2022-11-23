@@ -4,57 +4,30 @@ import {
   SkillHoriListStyled,
   SkillHoriTitleStyled,
 } from './SkillHoriListStyled';
+import { skills } from '../../../data/skill';
+import { css } from '@emotion/css';
 
 function SkillHoriList() {
-  const skills = [
-    {
-      title: 'FRONTEND',
-      list: [
-        'React.js',
-        'Next.js',
-        'Angular',
-        'HTML',
-        'CSS',
-        'SASS',
-        'Javascript',
-        'Typescript',
-        'Emotion',
-        'Storybook',
-        'Recoil',
-      ],
-    },
-    {
-      title: 'BACKEND',
-      list: [
-        'Node.js',
-        'Express.js',
-        'Nest.js',
-        'TypeORM',
-        'Sequelize',
-        'Spring Framework',
-        'JPA',
-        'MyBatis',
-        'MySQL',
-        'MariaDB',
-      ],
-    },
-    { title: 'Cloud', list: ['AWS', 'Firebase'] },
-    { title: 'Git', list: ['GitHub', 'GitLab', 'Bitbucket'] },
-    {
-      title: 'CI/CD',
-      list: ['GitHub Action', 'Bitbucket Pipeline', 'Jenkins'],
-    },
-    {
-      title: 'TOOLS',
-      list: ['VS Code', 'Webstorm', 'IntelliJ', 'Datagrip', 'Figma', 'Postman'],
-    },
-  ];
   return (
-    <SkillHoriListStyled>
+    <SkillHoriListStyled
+      className={css`
+        padding: 0 0 96px;
+      `}
+    >
       {skills.map((skill) => (
         <SkillHoriItemStyled>
           <SkillHoriTitleStyled>{skill.title}</SkillHoriTitleStyled>
-          {skill.list.join(' | ')}
+          {/*{skill.list.join(' | ')}*/}
+          <SkillHoriListStyled>
+            {!!skill.list[0].list
+              ? skill.list.map((descSkill) => (
+                  <>
+                    <SkillHoriItemStyled>{descSkill.title}</SkillHoriItemStyled>
+                    {!!descSkill.list && descSkill.list.join(' | ')}
+                  </>
+                ))
+              : skill.list.map((x) => x.title).join(' | ')}
+          </SkillHoriListStyled>
         </SkillHoriItemStyled>
       ))}
     </SkillHoriListStyled>
